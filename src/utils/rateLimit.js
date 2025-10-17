@@ -7,7 +7,7 @@ const limiter = rateLimit({
   standardHeaders: "draft-8",
   legacyHeaders: false,
   ipv6Subnet: 56,
-  handler: (next, options) => {
+  handler: (req, res, next, options) => {
     const retryAfterSeconds = Math.ceil(options.windowMs / 1000);
 
     next(
