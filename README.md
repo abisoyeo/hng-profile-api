@@ -19,7 +19,7 @@ It exposes a single endpoint that returns basic profile information along with a
 Clone the repository and install the dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/abisoyeo/hng-profile-api
 cd hng-profile-api
 npm install
 ```
@@ -81,9 +81,13 @@ NODE_ENV=development
 
 ```json
 {
-  "full_name": "Abisoye Ogunmona",
-  "email": "ogunmonaa@gmail.com",
-  "stack": "Node.js/Express, C#/ASP.NET Core",
-  "cat_fact": "Cats sleep 70% of their lives."
+  "status": "success",
+  "user": {
+    "email": "<your email>",
+    "name": "<your full name>",
+    "stack": "<your backend stack>"
+  },
+  "timestamp": "<current UTC time in ISO 8601 format>",
+  "fact": "<random cat fact from Cat Facts API>"
 }
 ```
